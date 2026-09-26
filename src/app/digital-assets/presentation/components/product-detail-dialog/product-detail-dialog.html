@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>{{ product.title }}</h2>
+<mat-dialog-content class="dialog-content">
+  <img [src]="product.thumbnail" [alt]="product.title" class="dialog-image" />
+  <p><strong>{{ 'PRODUCT.DESCRIPTION' | translate }}:</strong> {{ product.description }}</p>
+  <p><strong>{{ 'PRODUCT.CATEGORY' | translate }}:</strong> {{ product.category }}</p>
+  @if (product.brand) {
+    <p><strong>{{ 'PRODUCT.BRAND' | translate }}:</strong> {{ product.brand }}</p>
+  }
+  <p><strong>{{ 'PRODUCT.PRICE' | translate }}:</strong> {{ product.price | currency:'USD' }}</p>
+  <p><strong>{{ 'PRODUCT.RATING' | translate }}:</strong> {{ product.rating }} / 5</p>
+  @if (product.stock !== undefined) {
+    <p><strong>{{ 'PRODUCT.STOCK' | translate }}:</strong> {{ product.stock }}</p>
+  }
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-flat-button color="primary" (click)="close()" aria-label="Close details dialog">
+    {{ 'PRODUCT.CLOSE' | translate }}
+  </button>
+</mat-dialog-actions>

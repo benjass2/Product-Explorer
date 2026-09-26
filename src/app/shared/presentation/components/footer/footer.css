@@ -1,0 +1,49 @@
+.app-footer {
+  width: 100%;
+  background-color: #1e293b;
+  color: #f8fafc;
+  text-align: center;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.footer-line {
+  margin: 0;
+  line-height: 1.4;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.footer-line.copyright {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #cbd5e1;
+}
+
+.footer-line.developer {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #94a3b8;
+  letter-spacing: 0.25px;
+}
+
+@media (max-width: 600px) {
+  .app-footer {
+    padding: 12px 16px;
+    gap: 4px;
+  }
+
+  .footer-line.copyright {
+    font-size: 0.8rem;
+  }
+
+  .footer-line.developer {
+    font-size: 0.75rem;
+  }
+}

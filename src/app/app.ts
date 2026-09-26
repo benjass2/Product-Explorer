@@ -1,8 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Toolbar} from './shared/presentation/components/toolbar/toolbar';
+import {Footer} from './shared/presentation/components/footer/footer';
+import {ProductCatalogue} from './digital-assets/presentation/views/product-catalogue/product-catalogue';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [Toolbar,Footer,ProductCatalogue],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

@@ -1,0 +1,27 @@
+{
+  "TOOLBAR": {
+    "TITLE": "Explorador de Productos",
+    "LANGUAGE": "Idioma"
+  },
+  "CATALOGUE": {
+    "TITLE": "Catálogo de Productos",
+    "CATEGORY": "Categoría",
+    "PHONE": "Celular",
+    "LAPTOP": "Computadora portátil"
+  },
+  "PRODUCT": {
+    "DESCRIPTION": "Descripción",
+    "CATEGORY": "Categoría",
+    "PRICE": "Precio",
+    "RATING": "Calificación",
+    "BRAND": "Marca",
+    "STOCK": "Stock",
+    "DETAILS_BUTTON": "Ver Detalles",
+    "PRODUCT_DETAILS": "Detalles del producto",
+    "CLOSE": "Cerrar"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Copyright © 2026 Product Explorer. Todos los derechos reservados",
+    "DEVELOPED_BY": "Desarrollado por"
+  }
+}

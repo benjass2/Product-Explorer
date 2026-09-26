@@ -1,0 +1,69 @@
+<section class="catalogue-container" aria-labelledby="catalogue-title">
+  <header class="catalogue-header">
+    <h1 id="catalogue-title" class="catalogue-heading">{{ 'CATALOGUE.TITLE' | translate }}</h1>
+
+    <mat-button-toggle-group
+      [value]="store.selectedTerm()"
+      (change)="onTermChange($event.value)"
+      aria-label="Filter products by type">
+      <mat-button-toggle value="phone" aria-label="Phone products">
+        {{ 'CATALOGUE.PHONE' | translate }}
+      </mat-button-toggle>
+      <mat-button-toggle value="laptop" aria-label="Laptop products">
+        {{ 'CATALOGUE.LAPTOP' | translate }}
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </header>
+
+  <!-- Spinner de carga -->
+  @if (store.isLoading()) {
+    <div class="spinner-container" aria-live="polite">
+      <mat-spinner diameter="48"></mat-spinner>
+    </div>
+  }
+
+  <!-- Mensaje de error -->
+  @if (store.errorMessage(); as error) {
+    <div class="error-banner" role="alert">
+      {{ error }}
+    </div>
+  }
+
+  <!-- Grid de 3 cards por fila -->
+  @if (!store.isLoading()) {
+    <div class="products-grid" role="region" aria-label="Product list">
+      @for (product of store.products(); track product.id) {
+        <mat-card class="product-card" appearance="outlined">
+          <img
+            mat-card-image
+            [src]="product.thumbnail"
+            [alt]="product.title"
+            class="card-image" />
+
+          <mat-card-header>
+            <mat-card-title class="card-title">{{ product.title }}</mat-card-title>
+          </mat-card-header>
+
+          <mat-card-content class="card-body">
+            <p class="description-text">{{ product.description }}</p>
+            <div class="product-metadata">
+              <p><strong>{{ 'PRODUCT.CATEGORY' | translate }}:</strong> {{ product.category }}</p>
+              <p><strong>{{ 'PRODUCT.PRICE' | translate }}:</strong> {{ product.price | currency:'USD' }}</p>
+              <p><strong>{{ 'PRODUCT.RATING' | translate }}:</strong> {{ product.rating }} / 5</p>
+            </div>
+          </mat-card-content>
+
+          <mat-card-actions align="start" class="card-footer">
+            <button
+              mat-button
+              color="primary"
+              (click)="openDetails(product)"
+              [attr.aria-label]="'View details for ' + product.title">
+              {{ 'PRODUCT.DETAILS_BUTTON' | translate }}
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      }
+    </div>
+  }
+</section>

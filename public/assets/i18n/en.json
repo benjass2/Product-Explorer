@@ -1,0 +1,27 @@
+{
+  "TOOLBAR": {
+    "TITLE": "Product Explorer",
+    "LANGUAGE": "Language"
+  },
+  "CATALOGUE": {
+    "TITLE": "Product Catalogue",
+    "CATEGORY": "Category",
+    "PHONE": "Phone",
+    "LAPTOP": "Laptop"
+  },
+  "PRODUCT": {
+    "DESCRIPTION": "Description",
+    "CATEGORY": "Category",
+    "PRICE": "Price",
+    "RATING": "Rating",
+    "BRAND": "Brand",
+    "STOCK": "Stock",
+    "DETAILS_BUTTON": "View Details",
+    "PRODUCT_DETAILS": "Product Details",
+    "CLOSE": "Close"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Copyright © 2026 Product Explorer. All rights reserved",
+    "DEVELOPED_BY": "Developed by"
+  }
+}
