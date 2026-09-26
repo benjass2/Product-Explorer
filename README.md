@@ -4,7 +4,7 @@ Web application developed for DummyJSON to explore and consult catalog products.
 
 ## Author
 - **Developer**: Benjamin Solorzano Sullca
-- **Student Code**: u[tucodigo]
+- **Student Code**: u202422816
 - **Course**: Desarrollo de Aplicaciones Open Source (1ASI0729)
 - **NRC**: 7747
 
